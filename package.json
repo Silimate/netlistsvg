@@ -1,12 +1,12 @@
 {
   "name": "@silimate/netlistsvg",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "rendering a schematic from a netlist",
   "main": "built/index.js",
   "author": "Neil Turley",
   "license": "MIT",
   "dependencies": {
-    "@silimate/netlistsvg": "^1.0.3",
+    "@silimate/netlistsvg": "^1.0.4",
     "@types/clone": "^2.1.0",
     "@types/lodash": "^4.14.170",
     "ajv": "^8.6.1",
