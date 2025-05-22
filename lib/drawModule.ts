@@ -104,7 +104,6 @@ export default function drawModule(g: ElkModel.Graph, module: FlatModule) {
     const svgAttrs: onml.Attributes = Skin.skin[1];
     svgAttrs.width = g.width.toString();
     svgAttrs.height = g.height.toString();
-    svgAttrs.style = '--vscode-foreground: #000; --vscode-background: #fff;';
 
     const styles: onml.Element = ['style', {}, ''];
     onml.t(Skin.skin, {
