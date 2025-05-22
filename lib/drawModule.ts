@@ -79,7 +79,7 @@ export default function drawModule(g: ElkModel.Graph, module: FlatModule) {
                                 width: (e.labels[0].text.length + 2) * 6 - 2,
                                 height: 9,
                                 class: netName,
-                                style: 'fill: none; stroke: none',
+                                style: 'fill: var(--vscode-editor-background); stroke: none',
                             },
                         ], ['text',
                             {
@@ -114,7 +114,7 @@ export default function drawModule(g: ElkModel.Graph, module: FlatModule) {
         },
     });
     const elements: onml.Element[] = [styles, ...nodes, ...lines];
-    const ret: onml.Element = ['svg', svgAttrs, ...elements];
+    const ret: onml.Element = ['svg', svgAttrs, elements.map(e => onml.s(e)).join('')];
     return onml.s(ret);
 }
 
