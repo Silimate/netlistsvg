@@ -43,7 +43,7 @@ export default function drawModule(g: ElkModel.Graph, module: FlatModule) {
                         cx: j.x,
                         cy: j.y,
                         r: (numWires > 1 ? 3 : 2),
-                        style: 'fill:#000',
+                        style: 'fill:var(--vscode-foreground)',
                         class: netName,
                     }]);
                 bends = bends.concat(circles);
@@ -104,6 +104,7 @@ export default function drawModule(g: ElkModel.Graph, module: FlatModule) {
     const svgAttrs: onml.Attributes = Skin.skin[1];
     svgAttrs.width = g.width.toString();
     svgAttrs.height = g.height.toString();
+    svgAttrs.style = '--vscode-foreground: #000; --vscode-background: #fff;';
 
     const styles: onml.Element = ['style', {}, ''];
     onml.t(Skin.skin, {
