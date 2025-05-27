@@ -295,7 +295,19 @@ export default class Cell {
         const src = this.getSourceAttribute();
         if (src) {
             tempclone[1].onclick = `gotosrc('${src}')`;
-            tempclone[1].style = 'cursor: pointer;';
+            tempclone[1].style = 'cursor: pointer; position: relative;';
+            // Add hit area matching the gate's rectangle
+            const hitArea = ['rect', {
+                x: 0,
+                y: 0,
+                width: Number(template[1]['s:width']),
+                height: Number(template[1]['s:height']),
+                fill: 'transparent',
+                'pointer-events': 'all',
+                stroke: 'none',
+                style: 'cursor: pointer;'
+            }];
+            tempclone.splice(2, 0, hitArea);
         }
         
         if (this.type === '$_split_') {
