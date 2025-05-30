@@ -36,7 +36,7 @@ function drawModule(g, module) {
                             cx: j.x,
                             cy: j.y,
                             r: 2,
-                            style: 'fill:#000',
+                            style: 'fill:var(--vscode-foreground)',
                         }];
                 });
                 bends = bends.concat(circles);

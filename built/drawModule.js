@@ -51,7 +51,7 @@ function drawModule(g, module) {
                             cx: j.x,
                             cy: j.y,
                             r: (numWires > 1 ? 3 : 2),
-                            style: 'fill:#000',
+                            style: 'fill:var(--vscode-foreground)',
                             class: netName,
                         }];
                 });
